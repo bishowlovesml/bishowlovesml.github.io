@@ -1,26 +1,740 @@
-<!DOCTYPE html>
-<html>
+
+<!doctype html>
+<html lang="en" class="no-js">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>MyFirstApp</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for ML">
+      
+      
+      
+        <link rel="canonical" href="https://bishowlovesml.github.io/">
+      
+      
+      
+      
+      <link rel="icon" href="assets/logo/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Machine Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010M6%2013h8l-3.5%203.5%201.42%201.42L17.84%2012l-5.92-5.92L10.5%207.5%2014%2011H6z%22/%3E%3C/svg%3E');}</style>
+
 
     
-<meta name="my-first-app/config/environment" content="%7B%22modulePrefix%22%3A%22my-first-app%22%2C%22environment%22%3A%22development%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22name%22%3A%22my-first-app%22%2C%22version%22%3A%220.0.0%2B480c3247%22%7D%2C%22exportApplicationGlobal%22%3Atrue%7D" />
-
-    <link integrity="" rel="stylesheet" href="/assets/vendor.css">
-    <link integrity="" rel="stylesheet" href="/assets/my-first-app.css">
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
 
     
-  </head>
-  <body>
     
+    
+   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#welcome-to-machine-learning" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
 
-    <script src="/assets/vendor.js"></script>
-    <script src="/assets/my-first-app.js"></script>
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Machine Learning" class="md-header__button md-logo" aria-label="Machine Learning" data-md-component="logo">
+      
+  <img src="assets/logo/ml.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Machine Learning
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Welcome to Machine Learning
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="blog/" class="md-tabs__link">
+          
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Machine Learning" class="md-nav__button md-logo" aria-label="Machine Learning" data-md-component="logo">
+      
+  <img src="assets/logo/ml.jpg" alt="logo">
+
+    </a>
+    Machine Learning
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
 
     
-  </body>
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-get-comfortable-with-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Get Comfortable with Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-understand-what-ml-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Understand What ML Is
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-hands-on-with-ml-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Hands-On with ML Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-take-online-courses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Take Online Courses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-build-projects-share" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Build Projects &amp; Share
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bonus-stay-curious" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bonus: Stay Curious
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-by-doing-or-applying" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning by Doing or Applying
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-browser-desktop-app-mobile-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web Browser, Desktop App &amp; Mobile App
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="welcome-to-machine-learning">Welcome to Machine Learning</h1>
+<hr />
+<h2 id="steps">Steps</h2>
+<h3 id="step-1-get-comfortable-with-prerequisites">Step 1: Get Comfortable with Prerequisites</h3>
+<p>Before jumping into ML directly, make sure you're solid on:</p>
+<p><strong>Math Basics (not scary, I promise!):</strong></p>
+<ul>
+<li>Linear algebra (vectors, matrices)</li>
+<li>Calculus (basic derivatives)</li>
+<li>Probability &amp; statistics (mean, variance, distributions)</li>
+</ul>
+<p><strong>Programming:</strong></p>
+<ul>
+<li>
+<p>Learn Python — it's the most popular ML language.</p>
+<ul>
+<li>Libraries to know: <code>NumPy</code>, <code>Pandas</code>, <code>Matplotlib</code></li>
+</ul>
+</li>
+</ul>
+<p>🧠 Tip: Use platforms like <a href="#">Khan Academy</a> (for math) and Python tutorials on <a href="#">Codecademy</a> or <a href="#">freeCodeCamp</a>.</p>
+<hr />
+<h3 id="step-2-understand-what-ml-is">Step 2: Understand What ML Is</h3>
+<p>Start with the core ideas:</p>
+<ul>
+<li>
+<p>What is Machine Learning?</p>
+</li>
+<li>
+<p>Difference between:</p>
+<ul>
+<li>Supervised learning (e.g., regression, classification)</li>
+<li>Unsupervised learning (e.g., clustering)</li>
+<li>Reinforcement learning</li>
+</ul>
+</li>
+</ul>
+<p>📺 Good starting video: <a href="#">“How Machines Learn” by 3Blue1Brown</a></p>
+<hr />
+<h3 id="step-3-hands-on-with-ml-tools">Step 3: Hands-On with ML Tools</h3>
+<p>Once you have the basics, dive into real ML with:</p>
+<ul>
+<li><a href="#">scikit-learn</a> (classic library for beginners)</li>
+<li><a href="#">TensorFlow</a> or <a href="#">PyTorch</a> (for deep learning)</li>
+<li><a href="#">Google Colab</a> (free tool to run Python/ML code in the browser)</li>
+</ul>
+<p>🛠 Beginner Projects:</p>
+<ul>
+<li>Predict housing prices</li>
+<li>Spam email classifier</li>
+<li>Image classifier with MNIST dataset</li>
+</ul>
+<hr />
+<h3 id="step-4-take-online-courses">Step 4: Take Online Courses</h3>
+<p>Some awesome ones:</p>
+<ul>
+<li>📘 <a href="#">Coursera - Andrew Ng's ML course</a> (legendary beginner course)</li>
+<li>📘 <a href="#">fast.ai</a> (hands-on deep learning)</li>
+<li>📘 <a href="#">Google’s Machine Learning Crash Course</a></li>
+</ul>
+<hr />
+<h3 id="step-5-build-projects-share">Step 5: Build Projects &amp; Share</h3>
+<p>You learn best by doing. Try:</p>
+<ul>
+<li>Creating ML models with your own data</li>
+<li>Participating in Kaggle competitions</li>
+<li>Writing blogs or GitHub repos about what you’ve built</li>
+</ul>
+<hr />
+<h3 id="bonus-stay-curious">Bonus: Stay Curious</h3>
+<ul>
+<li>Follow ML researchers on Twitter/X</li>
+<li>Read papers (start with summaries on sites like <a href="#">Papers With Code</a>)</li>
+<li>Join communities like Reddit's r/MachineLearning or ML Discords</li>
+</ul>
+<hr />
+<h2 id="learning-by-doing-or-applying">Learning by Doing or Applying</h2>
+<p>Absolutely, "<strong>learning by doing</strong>" is the best way to truly understand machine learning — and it’s awesome that you’re thinking about applying it to <strong>real-world apps</strong>, like web or mobile applications. Let’s break down <mark>how you can actually use ML in a browser, desktop, or mobile app</mark>:</p>
+<details class="tip" open="open">
+<summary>🧠 Step-by-Step: How to Use Machine Learning in Apps</summary>
+<p><strong>1. Build the ML Model</strong></p>
+<p>Use Python and libraries like:</p>
+<ul>
+<li><code>scikit-learn</code> for basic ML</li>
+<li><code>TensorFlow</code> / <code>Keras</code> or <code>PyTorch</code> for deep learning</li>
+<li>Train your model using Jupyter Notebook or Google Colab</li>
+</ul>
+<p>✅ Example: Build a model that predicts house prices or detects if an image contains a cat.</p>
+<hr />
+<p><strong>2. Save the Model</strong></p>
+<p>After training:</p>
+<ul>
+<li>
+<p>Save it using:</p>
+<div class="language-py highlight"><span class="filename">python</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">joblib</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="s1">&#39;model.pkl&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>or for deep learning:</p>
+<div class="language-py highlight"><span class="filename">python</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">model</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;model.h5&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+</li>
+</ul>
+<hr />
+<p><strong>3. Use It in Applications</strong></p>
+<p>Now bring it into the real world!</p>
+</details>
+<hr />
+<h2 id="web-browser-desktop-app-mobile-app">Web Browser, Desktop App &amp; Mobile App</h2>
+<details class="example" open="open">
+<summary>Example</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">A. Web Browser (Web App)</label><label for="__tabbed_1_2">B. Desktop App</label><label for="__tabbed_1_3">C. Mobile App (Android/iOS)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Use:</p>
+<ul>
+<li><strong>Python backend (Flask or FastAPI)</strong></li>
+<li><strong>Frontend (HTML/CSS + JS or React)</strong></li>
+</ul>
+<p>🔧 Simple Workflow:</p>
+<ul>
+<li>Backend loads the model</li>
+<li>User uploads data/image via the web</li>
+<li>Backend runs prediction</li>
+<li>Sends result back to frontend</li>
+</ul>
+<p>🛠 Tools:</p>
+<ul>
+<li><strong>Flask + HTML</strong> (very simple to set up)</li>
+<li><strong>Streamlit</strong> (perfect for quick ML dashboards)</li>
+<li><strong>Gradio</strong> (builds interactive ML interfaces in seconds)</li>
+</ul>
+<p>🔗 Example:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip<span class="w"> </span>install<span class="w"> </span>gradio
+</span></code></pre></div>
+<div class="language-bash highlight"><span class="filename">python</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>import<span class="w"> </span>gradio<span class="w"> </span>as<span class="w"> </span>gr
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>def<span class="w"> </span>predict<span class="o">(</span>text<span class="o">)</span>:
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span>model.predict<span class="o">([</span>text<span class="o">])</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>gr.Interface<span class="o">(</span><span class="nv">fn</span><span class="o">=</span>predict,<span class="w"> </span><span class="nv">inputs</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>,<span class="w"> </span><span class="nv">outputs</span><span class="o">=</span><span class="s2">&quot;label&quot;</span><span class="o">)</span>.launch<span class="o">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Use:</p>
+<ul>
+<li><strong>PyQt</strong> or <strong>Tkinter</strong> (for GUI)</li>
+<li>Embed your model in the Python app</li>
+<li>You can even package it with <strong>PyInstaller</strong> to make an <code>.exe</code> for Windows</li>
+</ul>
+<p>🔧 Tools:</p>
+<ul>
+<li>PyQt5</li>
+<li>Tkinter</li>
+<li>PyInstaller (<code>pyinstaller myapp.py</code>)</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>There are 2 main ways to do this:</p>
+<p><strong>Option 1: Use TensorFlow Lite (TFLite)</strong></p>
+<ul>
+<li>
+<p>Convert your model:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">converter</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">lite</span><span class="o">.</span><span class="n">TFLiteConverter</span><span class="o">.</span><span class="n">from_saved_model</span><span class="p">(</span><span class="s1">&#39;model_path&#39;</span><span class="p">)</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">tflite_model</span> <span class="o">=</span> <span class="n">converter</span><span class="o">.</span><span class="n">convert</span><span class="p">()</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Use it in <a href="#">Android Studio (Java/Kotlin)</a> or <a href="#">Flutter</a></p>
+</li>
+</ul>
+<p><strong>Option 2: Use an API</strong></p>
+<ul>
+<li>Host your model online (e.g., Flask + Heroku)</li>
+<li>Your mobile app sends data → gets prediction from API</li>
+</ul>
+<p>🧠 Easier for beginners!</p>
+</div>
+</div>
+</div>
+</details>
+<hr />
+<p>🚀 Project Ideas You Can Try</p>
+<ul>
+<li>Image Classifier Web App (e.g. dog vs cat)</li>
+<li>Voice Command Mobile App (uses ML to understand spoken commands)</li>
+<li>Text Sentiment Analyzer (web app that tells if a sentence is happy/sad)</li>
+<li>Face Detection Desktop Tool</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 - 2026
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.top", "navigation.tabs.sticky", "navigation.tabs", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
